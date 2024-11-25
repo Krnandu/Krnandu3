@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div Class="logo"></div>
+      <ul>
+        <h1> Gifty Delight!</h1>
+        <li><a href="#listing">Products</a></li>
+        <li><a href="#cart">Cart</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section id="home" class="hero">
+    <div class="hero-content">
+        <h1>Beautiful Gifts for Every Occasion</h1>
+        <p>Stunning shop for thoughtful and unique gift products!</p>
+    </div>
+</section>
+
+  <!-- Product Listings Section -->
+  <section id="listing">
+    <h2>Product Listings</h2>
+    <div class="filters">
+      <label for="priceSort">Sort by Price:</label>
+      <select id="priceSort" onchange="filterAndSortProducts()">
+        <option value="Low-to-High">Low-to-High</option>
+        <option value="High-to-Low">High-to-Low</option>
+      </select>
+
+      <label for="ratingSort">Sort by Rating:</label>
+      <select id="ratingSort" onchange="filterAndSortProducts()">
+        <option value="Low-to-High">Low-to-High</option>
+        <option value="High-to-Low">High-to-Low</option>
+      </select>
+
+      <label for="typeFilter">Filter by Type:</label>
+      <select id="typeFilter" onchange="filterAndSortProducts()">
+        <option value="">All</option>
+        <option value="Luxury Gifts">Luxury Gifts</option>
+        <option value="Occasional Gifts">Occasional gifts</option>
+        <option value="Toy Gifts">Toy gifts</option>
+        <option value="Personalized Gifts">Personalized Gifts</option>
+      </select>
+    </div>
+    <div class="product-list" id="productList"></div>
+  </section>
+
+  <!-- Shopping Cart Section -->
+  <section id="cart">
+    <h2>Shopping Cart</h2>
+    <ul id="cartList"></ul>
+    <button onclick="clearCart()">Clear Cart</button>
+  </section>
+
+  <!-- About Us Section -->
+  <section id="about">
+    <h2>About Us</h2>
+    <p>We provide the best gifts for all occasions! We are passionate about making every special occasion even more memorable by offering a curated selection of high-quality, meaningful gifts for all ages and occasions. Whether you're celebrating a birthday, an anniversary, a holiday, or simply want to show someone you care, our collection is designed to help you express your feelings in the most memorable way.</p>
+  </section>
+
+  <!-- Contact Us Section -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+      <input type="text" placeholder="Name" id="Name" required>
+      <input type="email" placeholder="Email" id="Email" required>
+      <input type="tel" placeholder="Contact Number" id="Contact Number" required>
+      <textarea placeholder="Message" id="Message" required></textarea>
+      <button type="submit">Send message</button>
+    </form>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
